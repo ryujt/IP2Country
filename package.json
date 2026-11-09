@@ -1,0 +1,29 @@
+{
+  "name": "ip2country",
+  "version": "1.0.0",
+  "description": "Offline IP to country lookup API server (bundled MMDB, air-gapped friendly)",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test test/",
+    "update-db": "node scripts/update-db.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ryujt/IP2Country.git"
+  },
+  "author": "",
+  "license": "UNLICENSED",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/ryujt/IP2Country/issues"
+  },
+  "homepage": "https://github.com/ryujt/IP2Country#readme",
+  "dependencies": {
+    "mmdb-lib": "3.0.4"
+  },
+  "private": true,
+  "engines": {
+    "node": ">=20"
+  }
+}

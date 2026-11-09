@@ -1,0 +1,14 @@
+services:
+  ip2country:
+    build: .
+    image: ip2country:1.0.0
+    container_name: ip2country
+    restart: unless-stopped
+    ports:
+      - "${IP2COUNTRY_PORT:-8095}:8080"
+    environment:
+      DB_WATCH_INTERVAL_MS: "30000"
+      # ADMIN_TOKEN: "change-me"   # 설정 시 POST /admin/reload 활성
+    volumes:
+      # DB 디렉터리를 통째로 마운트한다(파일 단위 마운트는 mv 교체를 감지하지 못함).
+      - ./data:/app/data:ro
